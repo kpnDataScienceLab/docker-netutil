@@ -1,27 +1,20 @@
-# Netdebug
+# docker-netutil by KPN DataScienceLab
 
-bundle of networking tools to support debugging
+bundle of networking tools to support debugging: 
 
 Usage `nc` with default args (timeout 2 seconds):
-
-`docker run -ti --rm netdebug:nc google.com 80`
+`docker run -ti netutil:nc -- google.com 443`
 
 Usage `curl`:
-
-`docker run -ti --rm netdebug:curl google.com`
+`docker run -ti netutil:curl -- google.com`
 
 Usage `nslookup`:
-
-`docker run -ti --rm netdebug:nslookup google.com`
+`docker run -ti netutil:nslookup -- google.com`
 
 Latest tag is set to default entrypoint `sh`
-
-`docker run -ti --rm netdebug`
-
-same as
-
-`docker run -ti --rm --entrypoint sh netdebug`
-
+`docker run -ti --rm netutil`
+(same as)
+`docker run -ti --rm --entrypoint sh netutil`
 
 ### Summary supported commands
 ```
